@@ -1,3 +1,4 @@
+@import "./Components/home/home.styles.css";
 
 /* --------------- */
 /*   Variables     */
@@ -69,7 +70,6 @@ body, #root {
   min-height: 100vh;
   line-height: 1.5;
 }
-
 /* shorter line heights on headings and interactive elements */
 h1, h2, h3, h4,
 button, input, label {
@@ -116,7 +116,7 @@ select {
 }
 
 .flow > *:where(:not(:first-child)) { /* same as * + *  */
-  margin-top: 1.5rem; /* margin-top: var(--flow-space, 1rem) */
+  margin-top: var(--flow-space, 1.5rem);
 }
 
 .container {
@@ -333,56 +333,3 @@ select {
 button:focus {
   outline: 0;
 }
-
-/* --------------- */
-/*    Main CSS     */
-/* --------------- */
-
-#root {
-  width: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-
-  nav {
-    position: relative;
-    height: 96px;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2.5rem;
-    padding-left: 3rem;
-    width: 100%;
-  }
-
-  hr {
-    position: relative;
-    width:35%;
-    border: 1px solid hsl( var(--clr-white) / 0.2515);
-    z-index: 1;
-    margin-left: 1rem;
-
-  }
-
-  .hero {
-    position: relative;
-    grid-template-columns: 540px 450px;
-    grid-template-rows: 380px 435px;
-    grid-template-areas:
-    "headline button"
-    "headline button";
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-  }
-}
-
-#bg-img {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-

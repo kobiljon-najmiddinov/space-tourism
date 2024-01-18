@@ -1,0 +1,213 @@
+
+/* ------------------------- */
+/*  Mobile 280-768px design    */
+/* ------------------------- */
+@media screen and (min-width: 280px) and (max-width: 767px) {
+  
+  #bg-img {
+    min-height: 100%;
+    min-width: 375px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  nav {
+    margin-top: 1.5em;
+    padding-inline: 1.5em;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid greenyellow; */
+    /* height: 48px; */
+  }
+
+  #logo{
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .menu-btn {
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+  .menu-btn img {
+    display: block !important;
+    border: 0;
+  }
+
+  .mobile-nav {
+    background-color: hsl (var(--clr-white) / .04);
+    backdrop-filter: blur(40.774227142333984px);
+    height: auto;
+    width: 0px;
+    min-height: 100%;
+    list-style: none;
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .mobile-nav li {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+  .mobile-nav a {
+    color:hsl( var(--clr-white));
+    text-decoration: none;
+  }
+  .mobile-nav a > span {
+    font-weight: 700;
+    margin-right: .5rem;
+  }
+  .close-icon {
+    justify-content: end;
+    margin: 2rem 1rem 5rem 0rem;
+  }
+  .close-btn {
+    border: 0;
+    background: none;
+    float: right;
+  }
+  .underline-indicators-mobile > *{
+    padding: var(--underline-gap, .25rem) 0;
+    border-right: 4px solid hsl( var(--clr-white) / 0);
+  }
+  
+  .underline-indicators-mobile > *:hover,
+  .underline-indicators-mobile > *:focus {
+    border-right: 4px solid hsl( var(--clr-white) / .5);
+  
+  }.underline-indicators-mobile > *:active {
+    border-right: 4px solid hsl( var(--clr-white) / 1);
+  }
+  hr {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .main-content {
+    grid-template-columns: minmax(280px, 767px);
+    grid-template-rows: min-content;
+    grid-template-areas: 
+    "headline"
+    "button ";
+    padding: 2em 0;
+    margin-top: 5.5rem;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .headline {
+    --flow-space: 1rem;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headline > p {
+    font-size: var(--fs-300);
+  }
+
+  .headline > h2 {
+    font-size: 5rem;
+    padding: 2rem 0;
+
+  }
+  .headline-body {
+    font-size: 0.9375rem !important;
+    padding-inline: 3.5em;
+    text-align: center;
+    line-height: 166.667% !important;
+    max-width: 32rem;
+  }
+
+  .explore-btn {
+    justify-content: center;
+  }
+
+  .large-button  {
+    font-size: 20px !important;
+  }
+  
+
+  
+}
+
+/* ------------------------- */
+/*  Tablet 768x1024 design   */
+/* ------------------------- */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #bg-img {
+    min-height: 100%;
+    min-width: 768px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+/* ------------------------- */
+/*  Desktop 1440x900 design  */
+/* ------------------------- */
+
+@media screen and (min-width: 1024px) {
+  
+    nav {
+      position: relative;
+      height: 96px;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2.5rem;
+      padding-left: 3rem;
+      width: 100%;
+    }
+  
+    hr {
+      position: relative;
+      width:35%;
+      border: 1px solid hsl( var(--clr-white) / 0.2515);
+      z-index: 1;
+      margin-left: 1rem;
+  
+    }
+  
+    .main-content {
+      position: relative;
+      grid-template-columns: 540px 450px;
+      grid-template-rows: 380px 435px;
+      grid-template-areas:
+      "headline button"
+      "headline button";
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    #bg-img {
+      /* background-image: url(../../assets/home/background-home-desktop.jpg); */
+      min-height: 100%;
+      min-width: 1024px;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  }
+  
