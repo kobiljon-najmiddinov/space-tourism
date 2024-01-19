@@ -43,7 +43,7 @@ export const Home = () =>{
         }
 
     }
-    
+
     const clickHandler = useRef(null);
 
     function openNav(){
@@ -60,10 +60,10 @@ export const Home = () =>{
         <img id="bg-img" style={{objectFit: "fill"}} src={screenWidth()} alt="background image" />   
             <nav className="flex" >
                     <img id="logo" style={{width: "48px", height: "48px", position: "static"}} src={logo} alt="logo"  />
-                    <button onClick={openNav} className="menu-btn">
+                    <button onClick={openNav} className="menu-btn" style={{display:"none"}}>
                         <img  style={{display: "none", width: "24px", height: "21px"}} src={menu} alt="menu icon" />
                     </button>
-                    <div   ref={clickHandler} className="mobile-nav">
+                    <div   ref={clickHandler} className="mobile-nav" style={{display: "none"}}>
                         <div className=" flex close-icon">
                             <button onClick={closeNav} className="close-btn">
                                 <img src={closeIcon} alt="close icon" />
